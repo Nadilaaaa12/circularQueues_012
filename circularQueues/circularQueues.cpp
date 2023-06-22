@@ -6,7 +6,7 @@ class Queues {
 	int queue_array[5];
 
 public:
-	Queue() {
+	Queues() {
 		FRONT = -1;
 		REAR = -1;
 	}
@@ -17,6 +17,11 @@ public:
 		cin >> num;
 		cout << endl;
 
+		// Cek apakah antrian penuh
+		if ((FRONT == 0 && REAR == max - 1) || (FRONT == REAR + 1)) {
+			cout << "\nQueue overflow\n";
+			return;
+		}
 
 	}
 };
